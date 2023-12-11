@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+
+}
+
+body{
+    /* Texto no centro */
+    text-align: center; 
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(180deg,#DB4444 0%, #3F24DD 98%);
+    color: #fff;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around; /* Espaço uniforme entre as duas seções */ 
+    flex-wrap: wrap;
+}
+
+.tabuada-section,
+.calculator-section{
+    width: 45%;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    color: #333;
+    border-radius: 1rem;
+}
+
+h2{
+    margin-bottom: 3rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0; /* Adicionando espaço entre os controles do formulário */
+}
+
+.form-control label{
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.form-control input,
+.form-control select,
+#multiplication-form input[type="submit"],
+#calculator-form input[type="button"] {
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    width: calc(30% - 0.6rem); /* Ajuste para deixar os inputs lado a lado */
+    margin-right: 0.6rem; /* Espaço entre os inputs */
+}
+
+
+#multiplication-form input[type="submit"],
+#calculator-form input[type="button"] {
+    cursor: pointer;
+    padding: 0.6rem;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+#multiplication-operations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 2rem auto;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Espaço uniforme entre as colunas */
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    width: 150px;
+    margin-bottom: 0.5rem; /* Adicionando espaço entre as linhas */
+}
+
+.row:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+#calculator-result {
+    margin-top: 1rem;
+}
+
+#operation{
+    height: 2rem;
+    width: 5rem;
+    text-align: center;
+}

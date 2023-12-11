@@ -1,0 +1,211 @@
+/* Geral */
+*{
+margin: 0;
+border: 0;
+box-sizing: border-box;
+font-family: Helvetica;
+}
+
+/* Fundo  */
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh; /* Garante que a altura mínima seja 100% da viewport */
+margin: 0;
+}
+/* container */
+#main-container{
+display: block; /* um do lado do outro */
+margin-top: 30px; /* afastamento do topo da pagina */
+}
+#form-container{
+background-color: #fff;
+border: 1px solid #dbdbdb;
+width: 350px;
+margin-top: 30px;
+}
+#banner-container{
+/* Texto para direita */
+text-align: right;
+}
+#banner-container img{
+/* imagem do lado do texto e não utrapassadno */
+width: 100%;
+margin-right: 15px;
+margin-top: 25px;
+max-width: 380px;
+}
+#form-container{
+/* todo texto no centro */
+text-align: center;
+}
+
+/* Login FORM */
+#form-box{
+background-color: #fff;
+border: 1px solid #dbdbdb;
+width: 350px;
+margin-top: 30px;
+}
+#form-box p{
+font-size: 15px;
+padding: 17px;
+}
+#facebook-login{
+background-color:#4a95f6;
+border-radius: 3px; 
+width: 200px;
+padding: 10px;
+margin: 0 auto;
+}
+#logo-insta{
+width: 175px;
+height: 51px;
+/* 30px no topo, automatica na laterias e 12 embaixo  */
+margin: 30px auto 12px;
+}
+#login-form{
+/* afastamento em cima */
+margin-top: 20px;
+padding: 15px;
+}
+#login-form input{
+/* cada um ficar em uma linha */
+display: block;
+font-size: 12px;
+padding: 12px 9px;
+background-color: #fafafa;
+border: 1px solid #dbdbdb;
+border-radius: 3px;
+/* aumento */
+width: 268px;
+/* centralizar no meio e linha */
+margin: 5px auto;
+}
+/* Botão de Entrar */
+#login-form input[type="submit"]{
+background-color: #B2dFFC;
+color: #fff;
+margin-top: 15px;/* Afastar um pouco */
+border-radius: 5px;
+height: 30px;
+font-size: 13px;
+/* centralizou */
+padding: 0;
+font-weight: bold;
+}
+/* Separador */
+.separator{
+/* Vou ter posição absoluta dentro dessa div que vai ser nosso span */
+position: relative ;
+}
+.line{
+/* criando a linha  do Ou*/
+border-top: 1px solid #dbdbdb;
+width: 268px;
+margin: 25px auto 35px ;
+}
+.separator span{
+position: absolute;
+text-transform: uppercase;
+color: #dbdbdd;
+/* até aqui ele perde a refencia */
+background-color: #fff;
+/* aqui faz ele entrar para posiçao */
+top: -6px;
+width: 50px;
+/* centralizar */
+margin-left: -25px;
+font-size: 14px;
+}
+#login-form p{
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* FACEBOOK LOGIN */
+
+#facebook-login{
+/* afastamento do elementos */
+margin-bottom: 25px;
+}
+#facebook-login a{
+text-decoration: none;
+color: #385185;
+display: flex;
+/* Centralizar os itemns na vertical e horizontal */
+align-items: center;
+justify-content: center;
+}
+
+#facebook-login img{
+width: 26px;
+height: 16px;
+/* afastamento do texto */
+margin-right: 8px;
+}
+
+#facebook-login span{
+/* estilos do texto */
+font-weight: bold;
+font-size: 13px;
+margin-top: 1px;
+}
+
+/* Esqueceu a senha */
+
+#forgot-pass{
+/* afastar o elemento debaixo */
+margin-bottom: 20px;
+font-size: 12px;
+}
+
+#forgot-pass a{
+text-decoration: none;
+color: #373799;
+}
+
+/* Registro */
+#register-container{
+background-color: #fff;
+border: 1px solid #dbdbdb;
+/* largura */
+width: 350px;
+/* afastamento do top */
+margin-top: 10px;
+padding: 25px;
+}
+#register-container p{
+font-size: 14px;
+color: #262626;
+}
+#register-container a{
+color: #4a95f6;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* APLICATIVOS */
+
+#get-app-container {
+text-align: center;
+width: 350px;
+}
+
+#get-app-container p {
+margin: 20px 0;
+font-size: 13px;
+}
+
+#get-app-container a {
+text-decoration: none;
+}
+
+#get-app-container img {
+width: 136px;
+height: 40px;
+}
+
+

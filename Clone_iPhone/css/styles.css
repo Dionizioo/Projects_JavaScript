@@ -1,0 +1,286 @@
+/* Geral */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* NavBar */
+
+header nav {
+    background-color: #333;
+}
+
+#navbar {
+    display: flex;
+    /* deixando um do lado do outro */
+    justify-content: space-around;
+    align-items: center;
+    font-size: .7rem;
+    padding: 0 1rem;
+    max-width: 1000px;
+    /* deixa no meio */
+    margin:  0 auto;
+}
+
+/* links */
+
+#navbar a{
+    color: #f5f5f7;
+    transition: .4s;
+}
+
+#navbar a:hover{
+    color: #fff;
+}
+
+/* Segundo cabe */
+#bottom-header{
+    font-size: .8rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+#bottom-header h3{
+    font-size: 1.2rem;
+}
+
+#bottom-header a{
+    color: #333;
+}
+
+#bottom-header-inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    /* o titulo para uma lado e links para outro lado */
+    justify-content: space-between;
+}
+
+#bottom-header a{
+    /* espaço entre os links */
+    margin: 0 0.5rem;
+}
+
+#bottom-header-inner .btn,
+.btn{
+    background-color: #0071e3;
+    border-radius: 10rem;
+    /* espaçamento interno */
+    padding: .4rem 1rem;
+    color: #fff;
+}
+
+/* Conteudo */
+#ribbon{
+    text-align: center;
+    padding: 1rem;
+    background-color:  #f5f5f7;
+    color: #1d1d1d;
+}
+
+#ribbon a{
+    color: #0071e3;
+}
+
+#main-content{
+    text-align: center;
+    color: #1d1d1d;
+    display: flex;
+    flex-direction: column; 
+}
+
+#main-content #title{
+    margin: 1rem;
+    font-size: 1.2rem
+}
+
+#main-content #subtitle{
+    margin: 1rem;
+    font-size: 4rem;
+    font-weight:bold;
+}
+
+#main-content #description{
+    max-width: 600px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+#main-content #price{
+    font-size: 1.3rem;
+    color: #868686;
+    margin: 2rem;
+}
+
+#main-content .btn{
+    font-size: 1.1rem;
+    padding: .8rem 1.4rem;
+    /* margin: 1rem auto */
+    align-self:center ;
+}
+
+#main-content #product-imagem{
+    max-width: 1000px;
+    margin: 3rem auto;
+    opacity: 1;
+    transition: .5s;
+}
+
+#main-content #product-imagem.changing{
+    opacity: 0.5s;
+}
+
+#image-picker{
+    margin-bottom: 2rem;
+}
+
+#image-picker ul{
+    display: flex;
+    justify-content: center;
+}
+
+#image-picker li{
+   margin: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   cursor: pointer;
+}
+
+#image-picker li .color{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px;
+    border: 3px solid #fff;
+    pointer-events: none;
+}
+
+#image-picker li .description{
+    font-size: .7rem;
+    color: #1d1d1d;
+    margin-top: 0.6rem;
+}
+
+#green .color {
+background-color: #394c38;
+}
+
+#silver .color {
+background-color: #f1f2ed;
+}
+
+#golden .color {
+background-color: #fae7cf;
+}
+
+#grafite .color {
+background-color: #54524f;
+}
+
+#blue .color {
+background-color: #a7c1d9;
+}
+
+.selected {
+outline: 2px solid #43a1ff;
+}
+
+#storage-options {
+margin: 2rem auto;
+text-align: center;
+}
+
+#storage-options h2 {
+margin: 1rem 0;
+}
+
+.storage-option {
+display: inline-block;
+background-color: #f5f5f7;
+width: 7rem;
+padding: 5rem; /* Ajuste o valor de padding conforme necessário */
+margin: 1rem;
+border-radius: 10px; /* Ajuste o valor de border-radius conforme necessário */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajuste o valor de box-shadow conforme necessário */
+}
+
+.storage-option p {
+font-size: 1rem;
+}
+
+/* conteudo */
+
+#box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos no eixo transversal (vertical) */
+    margin: 2rem auto;
+    max-width: 1000px; 
+}
+#title-product{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    text-align: center;
+    gap: 2rem;
+}
+#content-image {
+    display: flex;
+    justify-content: space-between; /* Distribui as imagens igualmente */
+    align-items: center;
+    position: relative; /* Adiciona posição relativa para que os textos absolutos se posicionem corretamente */
+    margin-top: 2rem;
+    gap: 10rem;
+}
+#box-content p{
+    font-size: 1rem;
+    padding: 1rem;
+    margin-left: 5rem;
+    
+}
+
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 480px) {
+#navbar li {
+    display: none;
+}
+
+#navbar #logo {
+    display: flex;
+}
+
+#bottom-header-links a {
+    display: none;
+}
+
+#bottom-header-links .btn {
+    display: flex;
+}
+
+#main-content {
+    padding: 2rem;
+    overflow: hidden;
+}
+
+#main-content #subtitle {
+    font-size: 3rem;
+}
+}
+  

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #34db7a;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.2s;
+  margin-right: 20px; /* Adiciona uma margem à direita para mover para a direita */
+}
+
+.container.active {
+  height: 500px;
+}
+
+.container-reader {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.2s;
+  margin-top: 20px; /* Adiciona uma margem entre os containers */
+}
+
+#qr-header, #qr-reader-header {
+  text-align: center;
+}
+
+#qr-header h1, #qr-reader-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#qr-header p, #qr-reader-header p {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.container #qr-form,
+.container-reader #qr-reader {
+  margin: 20px 15px;
+}
+
+#qr-form input,
+#qr-form button,
+.container-reader #qr-reader input,
+.container-reader #qr-reader button {
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+#qr-form input {
+  border: 1px solid #777;
+  padding: 10px 15px;
+}
+
+#qr-form button,
+.container-reader #qr-reader button {
+  background-color: #086824;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.4s;
+}
+
+#qr-form button:hover,
+.container-reader #qr-reader button:hover {
+  opacity: 1;
+}
+
+/* QR Code */
+.container #qr-code,
+.container-reader #qr-reader,
+.container.active #qr-code {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid #ccc;
+  padding: 30px 0;
+  margin: 20px 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.active #qr-code,
+.container-reader.active #qr-reader {
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.5s;
+}
+
+#dowload,
+#qr-result {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#downloadBtn {
+  display: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de QR Code</title>
+    <!-- Fonte Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/sytles.css">
+
+    <!-- jsQR -->
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.0.0/dist/jsQR.js"></script>
+    <!-- Scripts -->
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Seção para gerar QR Code -->
+        <header id="qr-header">
+            <h1>Gerador de QR Code</h1>
+            <p>Insira uma URL ou texto para criar um QR Code</p>
+        </header>
+        <div id="qr-form">
+            <input type="text" placeholder="Digite a URL ou texto..." />
+            <button>Gerar QR Code</button>
+        </div>
+        <div id="qr-code" class="qr-code-section">
+            <img src="img/qrcode.png" alt="QR Code" />
+        </div>
+        <div id="download">
+            <button id="downloadBtn" onclick="downloadQRCode()">Baixar QR Code</button>
+        </div>
+    </div>
+
+    <!-- Seção para receber QR Code -->
+    <div class="container-reader">
+      <header id="qr-reader-header">
+          <h1>Leitor de QR Code</h1>
+          <p>Faça o upload de uma imagem contendo um QR Code</p>
+      </header>
+      <div id="qr-reader" class="qr-code-section">
+        <input type="file" accept="image/*" id="qr-input" style="display: none;" />
+        <button onclick="openFileInput()">Selecionar Imagem</button>
+        <img id="uploaded-image" src="#" alt="Imagem Carregada" style="display:none;" />
+        <button onclick="readQRCode()">Ler QR Code</button>
+    </div>
+    
+      <button onclick="readQRCode()">Ler QR Code</button>
+      <div id="qr-result">
+          <p id="qr-content">Conteúdo do QR Code: </p>
+      </div>
+  </div>
+</body>
+</html>
