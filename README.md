@@ -22,9 +22,18 @@ Bem-vindo ao repositório que documenta meu aprendizado no curso de Frontend! Aq
 - **Descrição:** Página com uma tabuada simples implementada em HTML, CSS, e JavaScript.
 - **Tecnologias:** HTML, CSS, JavaScript.
 
-## Projeto 6: Todo Avançado - Breve
+## Projeto 6: Todo Avançado - 
 - **Descrição:** Aplicativo de lista de tarefas avançado com recursos de edição, filtragem e pesquisa.
 - **Tecnologias:** HTML, CSS, JavaScript.
+
+## Projeto 7: Gerador de Senha
+- **Descrição:** Página para gerar senhas com opções personalizadas.
+- **Tecnologias:** HTML, CSS, JavaScript.
+
+## Projeto 8: Pagina para Tarefas
+- **Descrição:** Página para organizar suas pendencias de modo facil.
+- **Tecnologias:** HTML, CSS, JavaScript.
+
 
 Este repositório é uma amostra do meu progresso no curso de Frontend e reflete a aplicação prática dos conhecimentos adquiridos. Sinta-se à vontade para explorar cada projeto e suas implementações.
 
