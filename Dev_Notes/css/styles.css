@@ -1,0 +1,229 @@
+/* Geral */
+*{
+    margin: 0;
+    padding: 0;
+    /* Para Padding não somar com altura do elemento */
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body{
+    background-color: #778102;
+}
+
+/* Cabeçalho */
+
+header{
+    /* Dividir  */
+    border-bottom: 1px solid #ccc;
+    /* laterias e em cima */
+    padding: 1rem 2rem;
+    color: #FFF;
+    /* Deixar o item um do lado do outro */
+    display: flex;
+    align-items: center;
+    /* espaço entere iguais nele */
+    justify-content: space-around; 
+}
+
+#search-container{
+    display: flex;
+    align-items: center; 
+    /* afastar o icone do input */
+    gap: 1rem;
+}
+
+
+#search-input{
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    /* aumentar a largula */
+    width: 400px;
+}
+
+#search-input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+
+#export-notes{
+    width: 100px;
+    border: 2px solid #030303;
+    border-radius: 5px;
+    padding: 2px;
+    background-color: #f7f7f7; 
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#export-notes:hover{
+    background-color: #030303;
+    color: #f7f7f7;
+}
+
+/* Form de Nova Nota */
+
+#add-note-container{
+    display: flex;
+    width: 400px;
+    /* 1rem do topo(afastado do cabeçalho),automatico na laterais e 0 em baixo*/
+    margin: 1rem auto 0;
+    gap:1rem
+}
+
+#add-note-container input,
+#add-note-container button{
+    padding: 10px;
+    border: none;
+    /* vão compartilhar a mesmas dimensões */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+#add-note-container input{
+    /* para poder o maximo possivel dentro do 400px que temos vindo do add-note-container */
+    flex: 1;
+    background-color: transparent;
+    border: 2px solid #dad9d9;
+    color: black;
+}
+
+#add-note-container input::placeholder{
+    color: rgb(235, 235, 235);
+    font-weight: bold;
+}
+
+#add-note-container button{
+    background-color: #f8f4f4;
+    color: #080000;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* Notas */
+
+#notes-container{
+    /* Um do lado do outra */
+    display: grid;
+    /* 3 colunas de 1fr - colunas iguais que se repetem */
+    grid-template-columns: repeat(auto-fill,250px);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.note{
+    min-height: 200px;
+    padding: 1rem;
+    border: 1px solid #0c0b0b;
+    background-color: #f8f4f4;
+    border-radius: 10px;
+    color: #778102;
+    /* vou ter elementos posicionar de forma absoluta */
+    position: relative;
+}
+
+.note textarea{
+    background-color: transparent;
+    resize: none;
+    color: #0c0b0b;
+    border: none;
+    height: 100%;
+    outline: none;
+    user-select: none;
+}
+
+
+.note .bi-pin {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 3px;
+    /* Para remover o curso do "|" */
+    user-select: none; 
+}
+  
+  .note:hover > i {
+    /* quando voce passa o mouse aparece os icones */
+    opacity: 1;
+}
+  
+  .note .bi-x-lg,
+  .note .bi-file-earmark-plus {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 5px;
+    color: #555;
+    opacity: 0;
+    transition: 0.3s;
+}
+  
+  .note .bi-file-earmark-plus {
+    top: 40px;
+  }
+  
+  .note .bi-x-lg:hover,
+  .note .bi-file-earmark-plus:hover {
+    color: #fff;
+  }
+  
+  .note.fixed {
+    background-color: #3c3c3f;
+}
+
+/* preciso ajudar ajudar a localizaçãa da hora  */
+.note p {
+    text-align: right;
+    background-color: #333;
+    color: #fff;
+    width: max-content;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    /* preciso mover para direita */
+    margin-left: auto;
+    /* preciso que suba um pouco para cima */
+    margin-top: -1rem;
+    user-select: none;
+}
+
+
+
+/*Responsividade */   
+  @media(max-width: 450px){
+    header{
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    #search-container{
+        width: 100%;
+    }
+
+    #search-input{
+        width: 100%;
+    }
+
+    #add-note-container{
+        padding: 0 2rem;
+    }
+
+    #notes-container{
+        /* 1 coluna de 1fr */
+        grid-template-columns:repeat(auto-fill,100%) ; /* 100% da largura */
+    }
+  }
