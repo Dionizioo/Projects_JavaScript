@@ -34,6 +34,12 @@ Bem-vindo ao repositório que documenta meu aprendizado no curso de Frontend! Aq
 - **Descrição:** Página para organizar suas pendencias de modo facil.
 - **Tecnologias:** HTML, CSS, JavaScript.
 
+- ## Projeto 9: WeatherApi
+- **Descrição:** Página para realizar a consulta do tempo.
+- **Tecnologias:** HTML, CSS, JavaScript e API.
+
+
+
 
 Este repositório é uma amostra do meu progresso no curso de Frontend e reflete a aplicação prática dos conhecimentos adquiridos. Sinta-se à vontade para explorar cada projeto e suas implementações.
 
