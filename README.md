@@ -39,7 +39,7 @@ Bem-vindo ao repositório que documenta meu aprendizado no curso de Frontend! Aq
 - **Tecnologias:** HTML, CSS, JavaScript e API.
 
 - ## Projeto 10: Conversor de Texto para Fala
-- **Descrição:** Conversor de texto para Fala, onde você escolher varios idiomas.
+- **Descrição:** Conversor de texto para Fala, onde você pode escolher varios idiomas.
 - **Tecnologias:** HTML, CSS, JavaScript e API.
 
 
